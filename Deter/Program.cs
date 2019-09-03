@@ -21,7 +21,7 @@ namespace Deter
                 }
             }
             Console.WriteLine(Det(a));
-
+            Console.ReadLine();
         }
 
         static int Det(int[][] matrix)
