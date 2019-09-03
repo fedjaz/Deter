@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29215.179
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Deter", "Deter\Deter.csproj", "{862345E3-C590-4250-816C-EF0FEA2B7061}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{862345E3-C590-4250-816C-EF0FEA2B7061}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{862345E3-C590-4250-816C-EF0FEA2B7061}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{862345E3-C590-4250-816C-EF0FEA2B7061}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{862345E3-C590-4250-816C-EF0FEA2B7061}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DB8E3973-4B7E-4C82-8F0B-887462A6B4AD}
+	EndGlobalSection
+EndGlobal
