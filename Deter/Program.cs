@@ -11,16 +11,18 @@ namespace Deter
         static void Main(string[] args)
         {
             int n = int.Parse(Console.ReadLine());
-            int[][] a = new int[n][];
+            int[][] matrix = new int[n][];
             for (int i = 0; i < n; i++)
             {
-                a[i] = new int[n];
+                string s = Console.ReadLine();
+                var arr = s.Split(' ');
+                matrix[i] = new int[n];
                 for (int j = 0; j < n; j++)
                 {
-                    a[i][j] = int.Parse(Console.ReadLine());
+                    matrix[i][j] = int.Parse(arr[j]);
                 }
             }
-            Console.WriteLine(Det(a));
+            Console.WriteLine(Det(matrix));
             Console.ReadLine();
         }
 
@@ -30,10 +32,9 @@ namespace Deter
             {
                 return 0;
             }
-            else if (matrix.GetLength(0) == 2)
+            else if (matrix.Length == 1)
             {
-                return matrix[0][0] * matrix[1][1] -
-                       matrix[0][1] * matrix[1][0];
+                return matrix[0][0];
             }
 
             int sum = 0;
@@ -48,10 +49,11 @@ namespace Deter
                         if (j == k)
                             continue;
 
-                        nmatrix[i].Add(matrix[i][j]);
+                        nmatrix[i-1].Add(matrix[i][j]);
                     }
                 }
-                sum += matrix[0][k] * Det(nmatrix.Select(a => a.ToArray()).ToArray());
+                sum += matrix[0][k] * Det(nmatrix.Select(a => a.ToArray()).ToArray()) * 
+                    (k % 2 == 0 ? 1 : -1);
             }
             return sum;
         }
